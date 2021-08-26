@@ -20,7 +20,7 @@
   f.path = '../' // what you need to prepend to a URL to get to the /International directory 
 
   // AUTHORS AND TRANSLATORS should fill in these assignments:
-  f.thisVersion = { date:'2021-04-12', time:'16:00'} // date and time of latest edits to this document/translation
+  f.thisVersion = { date:'2021-08-22', time:'16:00'} // date and time of latest edits to this document/translation
   f.contributors = '' // people providing useful contributions or feedback during review or at other times
   // also make sure that the lang attribute on the html tag is correct!
   f.sources = '' // describes sources of information
@@ -55,12 +55,12 @@
     </div>
   </div>
     
-  <p>В вебе всегда важно связать веб-контент с информацией о языке. С одной стороны это важно для того чтобы веб-контент был правильно обработан или представлен читателю, с другой - также важно знать язык(и) целевой аудитории для кого предназначен веб-ресурс как целое. Это две разные вещи: технология должна предоставить отдельные способы для выражения каждой из них, а также создатели веб-контента должны использовать эти способы по назначению.</p>
-  <p>Этот артикул описывает различие между этими двумя типами языковой информации (метаданные и обработка текста).</p>
+  <p>В вебе всегда важно связать веб-контент с информацией о языке. С одной стороны, это важно для того чтобы веб-контент был правильно обработан или представлен читателю, с другой - также важно знать язык(и) целевой аудитории для которой предназначен веб-ресурс как целое. Это две разные вещи: технология должна предоставить отдельные способы для выражения каждой из них, а также создатели веб-контента должны использовать эти способы по назначению.</p>
+  <p>Эта статья описывает различие между следующими типами языковой информации: метаданные и обработка текста.</p>
 
   <section>
     <h2 id="processing"><a href="#processing">Язык обработки текста</a></h2>
-    <p>Браузер или приложение обычно обязаны принять язык во внимание когда они отображают или управляют веб-контентом. Это включает в себя случаи как воспроизведения текста в браузере, запуск проверки орфографии, стилизирование переносов линии, использование дефисов, выбор шрифтов по умолчанию и многое другое требующие соответствующего использования языка. По этой причине, браузер должен знать конкретно с каким <strong>языком</strong> он работает для <strong>определенной части текста</strong>.</p>
+    <p>Браузер или приложение обычно обязаны принять язык во внимание при отображении или управлении веб-контентом. Это включает в себя случаи как воспроизведения текста в браузере, запуск проверки орфографии, стилизирование переносов линии, использование дефисов, выбор шрифтов по умолчанию и многое другое требующие соответствующего использования языка. По этой причине, браузер должен знать конкретно с каким <strong>языком</strong> он работает для <strong>определенной части текста</strong>.</p>
     <p>Итак, мы по необходимости говорим о связывании <em>конкретного</em> языка с текстом или некоторой частью текста в границах веб-ресурса. Несмотря на то что целевая аудитория может владеть более чем одним языком, определенная часть текста может иметь только один язык.</p>
     <p>В HTML файле <code translate="no" class="kw">lang</code> аттрибут использован для определения языка обработки текста. Он может быть использован для всей страницы а также для фрагментов страницы где язык меняется.</p>
     <figure class="example">
@@ -74,25 +74,25 @@
   <section>
     <h2 id="metadata"><a href="#metadata">Метаданные: язык целевой аудитории</a></h2>
     <p>Метаданные описывающие язык или языки целевой аудитории относятся к <strong>целому документу/веб-ресурсу</strong>. Такие метаданные могут быть использованы для поиска, подачи правильной языковой версии, управления процессом, классификации и т.д.</p>
-    <!--<p>The language of the intended audience does not necessarily include every language used in a document. Many documents on the Web contain embedded fragments of content in different languages, whereas the page itself is clearly aimed at speakers of one particular language. For example, a German city-guide for Beijing may contain useful phrases in Chinese, but it is aimed at a German-speaking audience, not a Chinese one.</p> -->
-    <p>Язык целевой аудитории не требует упоминания каждого языка использованного в документе. Многие документы в вебе содержат в себе встроенные фрагменты веб-контента на разных языках, где страница сама по себе явно нацелена на носителей одного конкретного языка. Например,  </p>
-    <p>On the other hand, it <em>is</em> also possible for a page to contain the same or parallel content in more than one language. For example, a Canadian web page may welcome  readers with French content in the left column, and <em>the same content</em> in English in the right-hand column. Here the document is equally targeted at speakers of both languages, so there are two audience languages. This situation is not as common on the Web as in printed material since it is easy to link to separate pages on the Web for different audiences, but it does occur where there are multilingual communities. Another use case is a blog or a news page aimed at a multilingual community, where some articles on a page are in one language and some in another. For example, a  forum used by a Punjabi community may contain posts in English, Hindi and Punjabi in a single thread.</p>
-    <p>There are also pages where the navigational information, including the page title, is in one language but the real content of the page is in another. While this is not necessarily good practice, it doesn't change the fact that the language of the intended audience is usually that of the content, regardless of the language at the top of the document source.</p>
-    <p>For an HTML page, metadata about the audience could be expressed in an HTTP <code class="kw" translate="no">Content-Language</code> header. This content header can take multiple values.</p>
+    <p>Язык целевой аудитории не требует упоминания каждого языка использованного в документе. Многие документы в вебе содержат в себе встроенные фрагменты веб-контента на разных языках, где страница сама по себе явно нацелена на носителей одного конкретного языка. Например, немецкий путеводитель по Пекину может содержать полезные фразы на китайском, но он ориентирован на немецкоязычную, а не на китайскую аудиторию.</p>
+
+    <p>С другой стороны, веб-страница <em>может</em> содержать в себе один и тот же либо параллельный контент на нескольких языках. Например, канадская веб-страница может приветствовать читателей контентом на французском языке в левой колонке и <em>тем же самым контентом</em> на английском в правой колонке. Таким образом документ равнозначно направлен на носттелей обеих языков, следовательно двух языковых целевых аудиторий. Эта ситуация не так распространена в Интернете, как в печатных материалах, поскольку легко сделать ссылку на отдельные страницы в Интернете для разных аудиторий, но это действительно происходит там, где есть многоязычные сообщества. Другой вариант использования - это блог или новостная страница, ориентированная на многоязычное сообщество, где некоторые статьи на странице написаны на одном языке, а некоторые - на другом. Например, форум, используемый сообществом пенджабцев, может содержать сообщения на английском, хинди и панджаби в одной ветке.</p>
+    <p>Есть также страницы, на которых навигационная информация, включая заголовок, написана на одном языке, а реальное содержание страницы - на другом. Хотя это не обязательно является хорошей практикой, это не меняет того факта, что язык целевой аудитории обычно является языком контента, независимо от языка в верхней части источника документа.</p>
+    <p>Для HTML-страницы метаданные об аудитории могут быть выражены в формате HTTP <code class="kw" translate="no">Content-Language</code> заголовок. Этот заголовок содержимого может принимать несколько значений.</p>
     <figure class="example">
       <p><code>Content-Language: en, hi, pa</code></p>
     </figure>
-    <p>HTML  pages sometimes contain a <code class="kw" translate="no">meta</code> element that can declare language in a similar way, eg. <code translate="no">&lt;meta http-equiv=&quot;content-language&quot; content=&quot;en, fr&quot;/&gt;</code>, but this construct is now deprecated and should not be used. (For more details, see <a href="qa-http-and-lang">HTTP headers, meta elements and language information</a>.)</p>
+    <p>HTML страницы иногда включают <code class="kw" translate="no">meta</code> element that can declare language in a similar way, eg. <code translate="no">&lt;meta http-equiv=&quot;content-language&quot; content=&quot;en, fr&quot;/&gt;</code>, но эта конструкция устарела и не должна использоваться. (Подробнее см. <a href="qa-http-and-lang">HTTP headers, meta elements and language information</a>.)</p>
   </section>
 
   <section>
-    <h2 id="inference"><a href="#inference">Inferring the text-processing language from metadata</a></h2>
-    <p>In some cases, it may be possible to infer the text-processing language from  the metadata for the resource, but not always.</p>
-    <p>If the metadata value is a list of more than one language there needs to be a way of identifying <em>which</em> language to use when it comes to processing the content.</p>
-    <p>Furthermore, where there are language changes inside a document, information about the language of the intended audience can't be associated with the appropriate part of the page or document as would be needed for text-processing (ie. in a way that would be needed for the correct application of language-specific text-to-speech, styling, automatic font assignment, etc. to different parts of the document.)</p>
-    <p>When developing a new technology or format for data, developers should therefore provide separate methods for expressing the language of the intended audience vs. the text-processing language.</p>
-    <p>Content developers should use the available constructs properly.</p>
-    <p class="info" style="margin-top: 2em;">For information about how to set language in HTML, see <a href="qa-html-language-declarations">Объявление языка в HTML</a>.</p>
+    <h2 id="inference"><a href="#inference">Вывод языка обработки текста из метаданных</a></h2>
+    <p>В некоторых случаях можно определить язык обработки текста по метаданным ресурса, но не всегда.</p>
+    <p>Если значение метаданных представляет собой список из более чем одного языка, должен быть способ определения, <em> какой </em> язык использовать при обработке контента.</p>
+    <p>Кроме того, при изменении языка внутри документа информация о языке целевой аудитории не может быть связана с соответствующей частью страницы или документа, как это было бы необходимо для обработки текста (т. Е. Таким образом, чтобы необходим для правильного применения языкового преобразования текста в речь, стиля, автоматического назначения шрифта и т. д. для различных частей документа.)</p>
+    <p>Поэтому при разработке новой технологии или формата данных разработчики должны предоставлять отдельные методы для выражения языка целевой аудитории и языка обработки текста.</p>
+    <p>Разработчики контента должны правильно использовать доступные конструкции.</p>
+    <p class="info" style="margin-top: 2em;">Для получения информации о том, как установить язык в HTML, см. <a href="qa-html-language-declarations">Объявление языка в HTML</a>.</p>
   </section>
 
   <section>
